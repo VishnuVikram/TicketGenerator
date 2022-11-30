@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketGeneratorApp.DAL;
 using TicketGeneratorApp.Models;
 using ZXing.QrCode;
 
@@ -227,24 +228,25 @@ namespace TicketGeneratorApp
 
         private List<Employee> GetAllEmployees()
         {
-            return new List<Employee>()
-            {
-            new Employee(){ID = 1, EmpCode = "CS0231",FirstName = "Vishnu", LastName = "VIKRAMAN", NoOfAttendiees = "2"},
-            new Employee(){ID = 2, EmpCode = "CS0550",FirstName = "Vaisakh", LastName = "R", NoOfAttendiees = "4"},
-            new Employee(){ID = 3, EmpCode = "CS0927",FirstName = "Anamika", LastName = "Menon", NoOfAttendiees = "1"},
-            new Employee(){ID = 4, EmpCode = "CS0374",FirstName = "VISHNU", LastName = "Bose", NoOfAttendiees = "1"},
-            new Employee(){ID = 5, EmpCode = "CS0372",FirstName = "Naveen", LastName = "Davis", NoOfAttendiees = "2"},
-            new Employee(){ID = 11, EmpCode = "CS0142",FirstName = "Suneer", LastName = "P.A", NoOfAttendiees = "2"},
-            new Employee(){ID = 12, EmpCode = "CS0346",FirstName = "Parthiv", LastName = "Ravi", NoOfAttendiees = "3"},
-            new Employee(){ID = 13, EmpCode = "CS018",FirstName = "Akhil", LastName = "NP", NoOfAttendiees = "2"},
-            new Employee(){ID = 14, EmpCode = "CS0168",FirstName = "Binoj", LastName = "V", NoOfAttendiees = "2"},
-            new Employee(){ID = 15, EmpCode = "CS0056",FirstName = "Muhammed", LastName = "Shafeek", NoOfAttendiees = "1"},
-            new Employee(){ID = 111, EmpCode = "CS0583",FirstName = "Aby", LastName = "Varghese", NoOfAttendiees = "1"},
-            new Employee(){ID = 112, EmpCode = "CS1332",FirstName = "Akhil", LastName = "Krishna", NoOfAttendiees = "2"},
-            new Employee(){ID = 113, EmpCode = "CS1312",FirstName = "JiJo", LastName = "Joseph", NoOfAttendiees = "2"},
-            new Employee(){ID = 114, EmpCode = "CS1193",FirstName = "Neethu", LastName = "M", NoOfAttendiees = "2"},
-            new Employee(){ID = 115, EmpCode = "CS0781",FirstName = "Josmy", LastName = "Joseph", NoOfAttendiees = "`"}
-            };
+            return SQLConnector.GetEmployees();
+            //return new List<Employee>()
+            //{
+            //new Employee(){ID = 1, EmpCode = "CS0231",FirstName = "Vishnu", LastName = "VIKRAMAN", NoOfAttendiees = "2"},
+            //new Employee(){ID = 2, EmpCode = "CS0550",FirstName = "Vaisakh", LastName = "R", NoOfAttendiees = "4"},
+            //new Employee(){ID = 3, EmpCode = "CS0927",FirstName = "Anamika", LastName = "Menon", NoOfAttendiees = "1"},
+            //new Employee(){ID = 4, EmpCode = "CS0374",FirstName = "VISHNU", LastName = "Bose", NoOfAttendiees = "1"},
+            //new Employee(){ID = 5, EmpCode = "CS0372",FirstName = "Naveen", LastName = "Davis", NoOfAttendiees = "2"},
+            //new Employee(){ID = 11, EmpCode = "CS0142",FirstName = "Suneer", LastName = "P.A", NoOfAttendiees = "2"},
+            //new Employee(){ID = 12, EmpCode = "CS0346",FirstName = "Parthiv", LastName = "Ravi", NoOfAttendiees = "3"},
+            //new Employee(){ID = 13, EmpCode = "CS018",FirstName = "Akhil", LastName = "NP", NoOfAttendiees = "2"},
+            //new Employee(){ID = 14, EmpCode = "CS0168",FirstName = "Binoj", LastName = "V", NoOfAttendiees = "2"},
+            //new Employee(){ID = 15, EmpCode = "CS0056",FirstName = "Muhammed", LastName = "Shafeek", NoOfAttendiees = "1"},
+            //new Employee(){ID = 111, EmpCode = "CS0583",FirstName = "Aby", LastName = "Varghese", NoOfAttendiees = "1"},
+            //new Employee(){ID = 112, EmpCode = "CS1332",FirstName = "Akhil", LastName = "Krishna", NoOfAttendiees = "2"},
+            //new Employee(){ID = 113, EmpCode = "CS1312",FirstName = "JiJo", LastName = "Joseph", NoOfAttendiees = "2"},
+            //new Employee(){ID = 114, EmpCode = "CS1193",FirstName = "Neethu", LastName = "M", NoOfAttendiees = "2"},
+            //new Employee(){ID = 115, EmpCode = "CS0781",FirstName = "Josmy", LastName = "Joseph", NoOfAttendiees = "`"}
+            //};
         }
 
         #endregion
